@@ -3,6 +3,7 @@ body {
     margin: 0;
     text-align: center;
     font-family: 'Merriweather', serif;
+    overflow-x: hidden; /* Sa anpeche paj la glise sou kote sou tlf */
 }
 
 h1 {
@@ -31,7 +32,7 @@ p {
 
 .top-container {
     background-color: #E4F9F5;
-    position: relative; /* Sa a enpòtan anpil */
+    position: relative;
     padding-top: 100px;
 }
 
@@ -54,7 +55,6 @@ p {
     top: 40px;
 }
 
-
 .bottom-cloud {
     position: absolute;
     left: 250px;
@@ -66,11 +66,12 @@ p {
     margin: 100px auto 100px auto;
     text-align: left;
 }
+
 .profile-img {
-    width: 200px;        /* Ou ka chanje gwosè a jan ou vle */
-    height: 200px;       /* Wotè a dwe menm ak lajè a pou l fè yon wonn pafè */
-    border-radius: 50%;  /* Sa a se sekrè ki rann li won an */
-    object-fit: cover;   /* Sa pèmèt foto a pa parèt kraze si l te twò laj */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .code-img {
@@ -100,6 +101,8 @@ hr {
     font-size: 20px;
     padding: 10px 20px;
     text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
 }
 
 .btn:hover {
@@ -121,4 +124,51 @@ hr {
     color: #EAF6F6;
     font-size: 0.75rem;
     padding: 20px 0;
+}
+
+/* ==========================================
+   KÒD POU TELEFÒN (RESPONSIVE)
+   ========================================== */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3.5rem; /* Pi piti pou l pa depase */
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Ranje nuaj yo pou yo pa voye paj la sou kote */
+    .top-cloud {
+        position: static;
+        margin: 0 auto;
+        display: block;
+        width: 120px;
+    }
+
+    .bottom-cloud {
+        position: static;
+        margin: 20px auto;
+        display: block;
+        width: 120px;
+    }
+
+    /* Ranje seksyon konpetans yo */
+    .skill-row {
+        width: 90%; /* Pran plis lajè sou tlf */
+        text-align: center;
+    }
+
+    .code-img, .chilli-img {
+        width: 50%;
+        float: none; /* Retire "float" la pou foto a vin nan mitan */
+        margin: 0 auto 20px auto;
+        display: block;
+    }
+
+    .footer-link {
+        display: block; /* Mete lyen yo youn anba lòt sou tlf pou pi fasil klike */
+        margin: 15px 0;
+    }
 }
